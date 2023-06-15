@@ -47,6 +47,19 @@ def ejemplo3():
     #Al venderse las 3 replicas de la monalisa se elimina el nodo
     inventario_museo.listarReplicas()
 
+def ejemplo4():
+    print('-------------------EJEMPLO 3-----------------------')
+
+    inventario_museo  = LinkedListInvent()
+    
+    inventario_museo.agregarReplica("Monalisa")
+    inventario_museo.agregarReplica("Monalisa")
+    inventario_museo.agregarReplica("Monalisa")
+    inventario_museo.agregarReplica("La ultima cena")
+
+    inventario_museo.venderReplica("La espada de bolivar")#no existe esta replica
+    
+    inventario_museo.listarReplicas()
 
 ejemplo1()
 ejemplo2()
