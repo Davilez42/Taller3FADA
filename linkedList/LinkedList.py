@@ -30,29 +30,20 @@ class LinkedList:
         
     def delete(self,value):
         if self.head == None:
-            raise IndexError     
+            raise ValueError     
         h = self.head
-        ant = None
-        next = h.next
-        
+        ant = None               
         while h is not None and h.value!=value:
             ant = h
             h = h.next
-            next = h.next
-                 
-        if h is None:
-            raise IndexError
 
+        if h is None:
+            raise ValueError
         if ant is None :
-            self.head = next
+            self.head = h.next
             self.size_-=1
             return
-        
-        if next is None:
-            ant.next = None  
-         
-        if next is not None and ant is not None:
-            ant.next = next  
+        ant.next = h.next        
         self.size_-=1                    
         
     def size(self)->int:
