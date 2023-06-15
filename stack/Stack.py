@@ -1,4 +1,4 @@
-from array import array
+
 class Stack:
     def __init__(self,size) -> None:
         self.stack = [None]*size

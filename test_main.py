@@ -1,6 +1,7 @@
 from linkedList.LinkedList import LinkedList
 from stack.Stack import Stack
 from punto1 import combinarListas
+
 import numpy
 
 def test_getindex():
@@ -25,6 +26,16 @@ def test_getindex():
     
 def test_deleteValue():
     lista1 = LinkedList()
+    
+    try:
+        lista1.delete(0)
+        assert False
+    except ValueError:
+        assert True
+    except:
+        assert False
+    
+    
     lista1.insert(123)#0
     lista1.insert(23)#1
     lista1.insert(34)#2
@@ -34,6 +45,14 @@ def test_deleteValue():
     lista1.delete(123)
     lista1.delete(73)
     
+    try:
+        lista1.delete(722)
+        assert False
+    except ValueError:
+        assert True
+    except:
+        assert False 
+           
     assert 23 == lista1.get(0)
     assert 54 == lista1.get(2)
     assert 34 == lista1.get(1)
