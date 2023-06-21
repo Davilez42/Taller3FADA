@@ -1,6 +1,11 @@
 from linkedListInvent.LinkedListInvent import LinkedListInvent
 
-
+""" 
+Estudiantes
+- Oscar Fernando Rivera Pardo - 2067730 
+- Jeferson Aguiar Dominguez Diaz - 2067607 
+- Alvaro Andres Hurtado Vallecilla - 1958463
+- Jose David Suarez Cardona -2067548 """
 
 def ejemplo1():#Ejemeplo de agregar obras 
     print('-------------------EJEMPLO 1-----------------------')

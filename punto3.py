@@ -1,5 +1,13 @@
 from stackWithQueue.StackWithQueue import StackWithQueue
 
+""" 
+Estudiantes
+- Oscar Fernando Rivera Pardo - 2067730 
+- Jeferson Aguiar Dominguez Diaz - 2067607 
+- Alvaro Andres Hurtado Vallecilla - 1958463
+- Jose David Suarez Cardona -2067548 """
+
+
 def ejemplo1():
     print('-------------------EJEMPLO 1-----------------------')
     pila1 = StackWithQueue(5)#se crea una pila de tamaño 5
