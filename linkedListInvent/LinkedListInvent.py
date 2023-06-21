@@ -32,7 +32,8 @@ class LinkedListInvent:
                 ant = h 
                 h=h.next     
             if h is None:
-                print(f'La obra "{nombre}" no existe en el Inventario')         
+                print(f'La obra "{nombre}" no existe en el Inventario \n')
+                return         
             h.value.cantidad -= 1 
             if h.value.cantidad == 0: #si la cantidad llega a cero se desconecta el nodo
            

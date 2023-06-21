@@ -70,5 +70,3 @@ class LinkedList:
                 ant.next=  Node(element,h)    
         self.size_+=1    
         
-    def copy(self):
-        return deepcopy(self)     

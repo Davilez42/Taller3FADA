@@ -3,7 +3,6 @@ class StackWithQueue:
     def __init__(self,size) -> None:
         self.stack =  Queue(size)
         self.size = size
-        self.top = 0
 
     def estaVaciaPilaConColas(self)-> bool:
         return self.stack.size()==0
@@ -12,7 +11,7 @@ class StackWithQueue:
         self.stack.enqueue(element)
   
     def popPilaConColas(self):
-        cola_aux = Queue(self.size)
+        cola_aux = Queue(self.size)#se crea una cola del tamaño de la cola actual
         i=0
         while i <self.stack.size()-1:
             cola_aux.enqueue(self.stack.dequeue())

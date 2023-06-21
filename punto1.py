@@ -33,7 +33,7 @@ def ejemplo1():
     lista2.insert(1)
     lista2.insert(3) 
     lista2.insert(8)      
-    result = combinarListas(lista2,lista1)#/listas enlazada esperada / 1 3 3 7 8
+    result = combinarListas(lista2,lista1)#/listas enlazada esperada / 1 3 3 7 8 9
     
     for i in range(result.size()):
         print(result.get(i),end=" ")#recorro la lsita enlazada para saber si esta ordenada

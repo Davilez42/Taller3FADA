@@ -4,8 +4,7 @@ from linkedListInvent.LinkedListInvent import LinkedListInvent
 
 def ejemplo1():#Ejemeplo de agregar obras 
     print('-------------------EJEMPLO 1-----------------------')
-    inventario_museo  = LinkedListInvent()
-    
+    inventario_museo  = LinkedListInvent()   
     inventario_museo.agregarReplica("Giaconda")
     inventario_museo.agregarReplica("Giaconda")
     inventario_museo.agregarReplica("Giaconda")
@@ -17,8 +16,7 @@ def ejemplo1():#Ejemeplo de agregar obras
 
 def ejemplo2():#Ejemplo de vender obras
     print('-------------------EJEMPLO 2-----------------------')
-    inventario_museo  = LinkedListInvent()
-    
+    inventario_museo  = LinkedListInvent()    
     inventario_museo.agregarReplica("Giaconda")
     inventario_museo.agregarReplica("Persistencia de la memoria")
     inventario_museo.agregarReplica("El hombre de Vitrubio")
@@ -29,12 +27,10 @@ def ejemplo2():#Ejemplo de vender obras
     
     inventario_museo.listarReplicas()   
 
-
 def ejemplo3():
     print('-------------------EJEMPLO 3-----------------------')
 
-    inventario_museo  = LinkedListInvent()
-    
+    inventario_museo  = LinkedListInvent()  
     inventario_museo.agregarReplica("Monalisa")
     inventario_museo.agregarReplica("Monalisa")
     inventario_museo.agregarReplica("Monalisa")
@@ -46,9 +42,10 @@ def ejemplo3():
     inventario_museo.venderReplica("Monalisa")
     #Al venderse las 3 replicas de la monalisa se elimina el nodo
     inventario_museo.listarReplicas()
+    inventario_museo.venderReplica("Monalisa") #no existe la obra 'Monalisa' por que anteriormente fue vendida en su totalidad 
 
 def ejemplo4():
-    print('-------------------EJEMPLO 3-----------------------')
+    print('-------------------EJEMPLO 4-----------------------')
 
     inventario_museo  = LinkedListInvent()
     
@@ -61,6 +58,20 @@ def ejemplo4():
     
     inventario_museo.listarReplicas()
 
+def ejemplo5():
+    print('-------------------EJEMPLO 5-----------------------')
+    inventario_museo  = LinkedListInvent()    
+    inventario_museo.agregarReplica("La orca")
+    inventario_museo.agregarReplica("La santa")
+    inventario_museo.agregarReplica("La ultima cena")   
+    inventario_museo.venderReplica("La orca")
+    inventario_museo.venderReplica("La ultima cena")
+    inventario_museo.venderReplica("La santa")
+    
+    inventario_museo.listarReplicas() 
+    
 ejemplo1()
 ejemplo2()
 ejemplo3()
+ejemplo4()
+ejemplo5()

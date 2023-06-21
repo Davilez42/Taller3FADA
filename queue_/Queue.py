@@ -7,17 +7,14 @@ class Queue:
         self.s = 0
     def enqueue(self,element):
         if self.tail == self.head and self.s>0:
-            raise IndexError
+            raise OverflowError
         else:
             self.queue[self.tail]=element
             
             self.tail+=1
             if self.tail>=self.size_:
-                self.tail=0
-           
-                
+                self.tail=0              
             self.s+=1
-           # print(self.queue,self.tail)  
             
     def  dequeue(self):
         if self.tail ==  self.head and self.s==0:
@@ -29,7 +26,6 @@ class Queue:
             if self.head>=self.size_:
                 self.head=0            
             self.s-=1 
-           # print(self.queue,self.tail,self.head,"tamaño",self.s)    
             return element
    
 
