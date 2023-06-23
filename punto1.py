@@ -10,6 +10,10 @@ Estudiantes
 
 
 def combinarListas(l1:LinkedList,l2:LinkedList)->LinkedList:
+    """ este algoritmo conciste en recorrer las 2 listas enlazadas al mismo tiempo y
+    guardar en una tercera lista el numero menor del primer elemento de cada una de ellas
+    aprovechando que se encuentran ordenadas ascendemente cada una, una vez ya decidido que numero 
+    se ingresa a la lista se utilizan indices para controlar el acceso al siguiente elemento a comparar  """
     result =  LinkedList()
     l=0
     z=0
@@ -19,8 +23,12 @@ def combinarListas(l1:LinkedList,l2:LinkedList)->LinkedList:
             l+=1
         else:
             result.insert(l2.get(z))
-            z+=1
-            
+            z+=1          
+    """
+    Por ultimo se verifica si alguna de las dos listas no quedo vacia y
+    termina de insertar los elementos restantes en la lista resultado
+    """
+    
     if l1.size()!=l:
         for i in range(l,l1.size()):
             result.insert(l1.get(i))
