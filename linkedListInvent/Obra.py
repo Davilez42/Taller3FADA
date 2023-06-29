@@ -5,4 +5,4 @@ class Obra:
         
         
     def __format__(self):
-        return f'Nombre: {self.nombre}\nCantidad:{self.cantidad} \n '
+        return f'Nombre: {self.nombre}\nCantidad:{self.cantidad}'

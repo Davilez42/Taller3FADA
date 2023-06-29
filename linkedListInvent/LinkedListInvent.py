@@ -1,6 +1,7 @@
 
 from linkedList.Node import Node
 from linkedListInvent.Obra import Obra
+from linkedListInvent.ValueReplicaError import ValueReplicaError
 class LinkedListInvent:
     def __init__(self) -> None:
         self.head = None
@@ -32,8 +33,11 @@ class LinkedListInvent:
                 ant = h 
                 h=h.next     
             if h is None:
+                raise ValueReplicaError(f'La obra "{nombre}" no existe en el Inventario \n')
                 print(f'La obra "{nombre}" no existe en el Inventario \n')
-                return         
+                return
+                
+                     
             h.value.cantidad -= 1 
             if h.value.cantidad == 0: #si la cantidad llega a cero se desconecta el nodo
            
@@ -45,12 +49,13 @@ class LinkedListInvent:
     def listarReplicas(self):        
         h  =self.head
         if h==None:
-            print('Inventario vacio')
-            return      
+            return 'Inventario vacio'
+        obras = ""     
         while h is not None:
            obra = h.value
-           print(obra.__format__())
-           h= h.next  
+           obras += obra.__format__() + '\n\n'
+           h = h.next  
+        return obras   
            
            
            
